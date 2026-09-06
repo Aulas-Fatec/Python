@@ -1,0 +1,111 @@
+Luan Carlos Medeiros Ronzoni
+
+1)
+ladoA = float(input('A: '))
+ladoB = float(input('B: '))
+lado = float(input('C: '))
+ 
+if ladoA < ladoB + ladoC and ladoB < ladoA + ladoC and ladoC < ladoA + ladoB :
+    if ladoA == ladoB and ladoB == ladoC and ladoC == ladoA:
+        print('Equilatero')
+ 
+    elif ladoA != ladoB and ladoB != ladoC and ladoC != ladoA:
+        print('Escaleno')
+    else:
+        print('Isosceles ')
+else:
+    print('Não é triangulo.')
+ 
+2)
+ 
+ano = int(input('Ano: '))
+ 
+if ano % 4 == 0 :
+    if ano % 100 == 0 and ano % 400 == 0:
+         print('Bissexto!')
+    elif ano % 100 != 0:
+         print('Bissexto')
+ 
+3)
+ 
+peso_peixe = float(input('Kgs de peixe: '))
+limite_peixe = 50
+multa = 0
+if peso_peixe > limite_peixe:
+    multa = 4
+    excesso = peso_peixe - limite_peixe
+    multa = excesso * multa
+    print(f'valor total da multa {multa:.2f} excesso de {excesso}')
+else:
+    print(f'multa: {multa}, pois o peso {peso_peixe} foi abaixo de {limite peixe}')  
+ 
+4)
+ 
+a = float(input('N1: '))
+b = float(input('N2: '))
+c = float(input('N3: '))
+ 
+maior_numero = 0
+ 
+if a > b and a > c:
+    maior_numero = a
+elif b >= a and b >= c:
+    maior_numero = b
+elif c >= a and c >= b:
+    maior_numero = c
+ 
+print(maior_numero)
+ 
+5)
+ 
+A = float(input('A:'))
+B = float(input('B:'))
+C = float(input('C:'))
+ 
+maior = 0.0
+menor = 0.0
+ 
+if A > B and A > C:
+    maior = A
+elif B > A and B > C:
+    maior = B
+elif C > A and C > B:
+    maior = C
+if A < B and A < C:
+    menor = A
+elif B < A and B < C:
+    menor = B
+elif C < A and C < B:
+    menor = C
+ 
+print(maior)
+print(menor)
+ 
+6)
+ 
+valor = float(input('Valor/Hora: '))
+hora = float(input('Horas trabalhadas: '))
+sal_bruto = valor * hora
+descontos = 0.11 + 0.08 + 0.05
+valor_descontado = sal_bruto * descontos
+sal_liquido = sal_bruto - valor_descontado
+ 
+print(f'Bruto: {sal_bruto} \nLiquido: {sal_liquido}')
+ 
+7)
+
+metros = int(input(''))
+
+PRECO_LATA = 80.00
+LITRO_LATA = 18
+
+lata_pinta = metros / 3
+total_lata = int(lata_pinta / LITRO_LATA)
+
+if lata_pinta % total_lata != 0:
+    total_lata += 1
+
+total_preco = total_lata * PRECO_LATA
+
+print(total_lata, total_preco)
+

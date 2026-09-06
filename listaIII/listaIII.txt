@@ -1,0 +1,68 @@
+Luan Carlos Medeiros Ronzoni
+1) 
+
+nota = float(input('Nota: '))
+
+while nota < 0 or nota > 10: 
+    nota = 0
+    nota = float(input('Nota: '))
+print(nota)
+
+2)
+
+usuario = str(input('usuario: '))
+senha = str(input('Senha: '))
+
+while senha == usuario:
+    print('altere a senha')
+    usuario = str(input('usuario: '))
+    senha = str(input('Senha: '))
+print('usuario criado')
+
+3)
+
+paisA = float(80000)
+paisB = float(200000)
+ano = int(0) 
+while paisA <= paisB:   
+    ano += 1 
+    cresc_anoA = paisA * (3/100)
+    cresc_anoB = paisB * (1.5/100)
+    paisA = paisA + cresc_anoA
+    paisB = paisB + cresc_anoB
+
+print(f'em {ano} anos haverão {paisA:.0f} habitantes')
+
+4)
+
+a = 1
+b = 0
+i = 1
+pos = int(input(''))
+
+while i <= pos:
+    a, b = b, a+b
+    i = i + 1
+print(a)
+
+5)
+
+maior = 2
+menor = 10
+coringa = 0
+resto = 0
+
+if menor > maior:
+    coringa = maior
+    maior = menor
+    menor = coringa
+
+if maior % menor == 0:
+    resto = menor
+else:
+    while maior % menor > 0:
+        resto = maior % menor
+        maior = menor
+        menor = resto
+
+print(f'MDC: {resto}')
