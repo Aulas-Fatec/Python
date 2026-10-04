@@ -1,0 +1,100 @@
+a)
+
+def first_last6(nums): 
+  if nums[0] == 6 or nums[-1] == 6:
+    return True
+  else:
+    return False
+b)
+
+def same_first_last(nums):
+  if nums[0] == nums[-1]:
+    return True
+  else:
+    return False
+c)
+
+def common_end(a, b):
+    if len(a) >= 1 and len(b) >= 1:
+      if a[0] == b[0]:
+        return True
+      elif a[-1] == b[-1]:
+        return True
+      else:
+        return False
+d)
+
+def maior_ponta(nums):
+  maior_ponta = []
+  if nums[0] > nums[-1]:
+    for i in range(len(nums)):
+      maior_ponta.append(nums[0])
+      i +=1
+  elif nums[-1] > nums[0]:
+    for i in range(len(nums)):
+      maior_ponta.append(nums[-1])
+      i +=1
+  return maior_ponta
+e)
+
+def sum2(nums):
+  soma = 0
+  if len(nums) >= 2:
+    for i in range(2):
+      soma += nums[i]
+      i += 1
+  else:
+    for i in range(len(nums)):
+      soma += nums[i]
+      i += 1
+  return soma
+f)
+
+def middle_way(a, b):
+  nova_lista = []
+  for i in range(1): 
+    nova_lista.append(a[(len(a)//2)])
+    i+= 1
+  for j in range(1):
+    nova_lista.append(b[(len(a)//2)])
+    j+= 1
+  return nova_lista
+g)
+
+def date_fashion(eu, par):
+  if eu <= 2 or par <= 2:
+    return 0
+  if eu >= 8 or par >= 8:
+    return 2
+  else:
+    return 1 
+h)
+def squirrel_play(temp, is_summer):
+  temp_superior = 90
+  if is_summer:
+    temp_superior = 100
+  if temp >= 60 and temp <= temp_superior:
+    return True 
+  else:
+    return False
+i)
+def pego_correndo(speed, is_birthday):
+  velocidade = 60
+  if is_birthday:
+    velocidade += 5
+  if speed <= velocidade:
+    return 0
+  if speed >= (velocidade+1) and speed <= (velocidade+20):
+    return 1
+  if speed >= (velocidade+21):
+    return 2
+j)
+def alarm_clock(day, vacation):
+  if (day == 0 or day == 6) and not vacation:
+      return '10:00'
+  elif (1 <= day <= 5) and not vacation:
+     return '07:00' 
+  elif (1 <= day <= 5) and vacation:
+     return '10:00'
+  elif (day == 0 or day == 6) and vacation:
+     return 'off'
