@@ -1,0 +1,105 @@
+a)
+def near_ten(n):
+    if n % 10 == 0:
+        return True
+    a = n
+    for i in range(2):
+        n += 1
+        if n % 10 == 0:
+            return True
+    n = a
+    for i in range(2):
+        n -= 1
+        if n % 10 == 0:
+            return True
+    else:
+        return False
+b)
+def lone_sum(a, b, c):
+  if a == b == c:
+    return 0
+  if a == b:
+    return c
+  if b == c:
+    return a
+  if c == a:
+    return b
+  else:
+    return a + b + c
+c)
+def lucky_sum(a, b, c):
+  if a == 13:
+    return 0 
+  if b == 13:
+    return a
+  if c == 13:
+    return a + b
+  else:
+    return a + b + c
+d)
+def double_char(s):
+  empty_str = ''
+  for i in range(len(s)):
+    empty_str += s[i]*2
+  return empty_str
+e)
+def count_hi(s):
+  return s.count('hi')
+f)
+def cat_dog(s):
+  if s.count('cat') == s.count('dog'):
+    return True
+  else:
+    return False
+g)
+def count_code(s):
+  contador = 0
+  for i in range(len(s)):
+    if s[i] == 'c' and s[i+1] == 'o' and s[i+3]:
+      contador += 1
+  return contador
+h)
+def end_other(a, b):
+  a = a.lower()
+  b = b.lower()
+  if a in b:
+    return True
+  elif b in a:
+    return True
+  return False
+i)
+def count_evens(nums):
+  contador = 0 
+  for num in nums:
+    if num % 2 == 0:
+      contador += 1
+  return contador
+
+j)
+def sum13(nums):
+  soma = 0
+  if nums[0] == 13:
+    return 0
+  for num in nums:
+    if num == 13:
+      break
+    soma += num
+  return soma
+k)
+def has22(nums):
+  for i in range(len(nums)-1):
+    if nums[i] == 2 and nums[i+1] == 2:
+      return True
+  return False
+l)
+def soma_na_lista(n, lista):
+  for i in range(len(lista)):
+    for j in range(i+1, len(lista)):
+      if lista[i] + lista[j] == n and lista[i] != lista[j]:
+        return True
+  return False
+m)
+def fila_tijolos(n_peq, n_gra, meta):
+  if n_peq + n_gra * 5 >= meta:
+    return True
+  return False
